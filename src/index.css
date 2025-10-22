@@ -1,2 +1,29 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-pink-50 to-yellow-50;
+    font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  }
+  h1, h2, h3 {
+    @apply font-bold;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-pink-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-pink-300 rounded-full;
+}

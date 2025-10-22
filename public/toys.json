@@ -1,0 +1,122 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "https://i.ibb.co.com/h1MDJqbx/10713-Prod.png",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Barbie Dream house Doll Set",
+    "sellerName": "Happy Toys Corner",
+    "sellerEmail": "sales@happytoys.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 40,
+    "description": "A luxurious dollhouse complete with furniture and dolls, perfect for imaginative playtime adventures.",
+    "pictureURL": "https://i.ibb.co.com/5xndp5zB/images.jpg",
+    "subCategory": "Dolls & Accessories"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Hot Wheels Mega Track Set",
+    "sellerName": "Speedy Toys Hub",
+    "sellerEmail": "info@speedytoys.com",
+    "price": 59.5,
+    "rating": 4.6,
+    "availableQuantity": 65,
+    "description": "Create thrilling races and loops with this high-speed Hot Wheels track set, ideal for car enthusiasts.",
+    "pictureURL": "https://i.ibb.co.com/pjnbHs7W/download-1.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Plush Teddy Bear",
+    "sellerName": "Cuddle Corner",
+    "sellerEmail": "support@cuddlecorner.com",
+    "price": 25.99,
+    "rating": 4.9,
+    "availableQuantity": 100,
+    "description": "A soft, cuddly teddy bear made of premium plush fabric. Perfect gift for kids and loved ones.",
+    "pictureURL": "https://i.ibb.co.com/tTmPrfw6/download-2.jpg",
+    "subCategory": "Stuffed Animals"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Wooden Train Set",
+    "sellerName": "Eco Toys BD",
+    "sellerEmail": "eco@toysbd.com",
+    "price": 39.99,
+    "rating": 4.5,
+    "availableQuantity": 80,
+    "description": "A durable wooden train set that sparks creativity and motor skills for young kids.",
+    "pictureURL": "https://i.ibb.co.com/0pQnYvzR/images-1.jpg",
+    "subCategory": "Wooden Toys"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Remote Control Car",
+    "sellerName": "TechPlay Zone",
+    "sellerEmail": "hello@techplay.com",
+    "price": 69.99,
+    "rating": 4.4,
+    "availableQuantity": 55,
+    "description": "High-speed remote control car with rechargeable batteries and durable wheels for outdoor fun.",
+    "pictureURL": "https://i.ibb.co.com/1t2HF2jF/images-2.jpg",
+    "subCategory": "Electronics"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Kids Kitchen Play Set",
+    "sellerName": "Mini Chef Toys",
+    "sellerEmail": "cook@minichef.com",
+    "price": 54.99,
+    "rating": 4.6,
+    "availableQuantity": 50,
+    "description": "Interactive kitchen set with utensils and mini food items, inspiring culinary creativity in kids.",
+    "pictureURL": "https://i.ibb.co.com/BHhjmk8H/download-3.jpg",
+    "subCategory": "Pretend Play"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Action Hero Figure",
+    "sellerName": "Hero World Toys",
+    "sellerEmail": "support@heroworld.com",
+    "price": 34.5,
+    "rating": 4.3,
+    "availableQuantity": 70,
+    "description": "Detailed action hero figure with movable joints and accessories for action-packed adventures.",
+    "pictureURL": "https://i.ibb.co.com/gMX8TypS/images-3.jpg",
+    "subCategory": "Action Figures"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Puzzle Blocks for Kids",
+    "sellerName": "Brainy Play",
+    "sellerEmail": "brainy@playstore.com",
+    "price": 19.99,
+    "rating": 4.5,
+    "availableQuantity": 90,
+    "description": "Colorful puzzle blocks designed to boost problem-solving and coordination skills.",
+    "pictureURL": "https://i.ibb.co.com/KpXxxc0D/images-4.jpg",
+    "subCategory": "Educational Toys"
+  },
+  {
+    "toyId": 10,
+    "toyName": "Rubber Duck Bath Toy",
+    "sellerName": "Tiny Splash",
+    "sellerEmail": "contact@tinysplash.com",
+    "price": 12.99,
+    "rating": 4.8,
+    "availableQuantity": 120,
+    "description": "Classic yellow rubber duck toy that makes bath time more fun for toddlers.",
+    "pictureURL": "https://i.ibb.co.com/MkWTB7VN/download-4.jpg",
+    "subCategory": "Bath Toys"
+  }
+]

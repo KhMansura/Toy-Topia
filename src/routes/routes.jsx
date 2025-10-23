@@ -23,6 +23,9 @@ import ForgotPassword from "../pages/ForgotPassword";
 import ExtraPage from "../pages/ExtraPage";
 import NotFound from "../pages/NotFound";
 import PrivatesRoutes from "./PrivatesRoutes";
+import Terms from "../pages/Terms";
+import Privacy from "../pages/Privacy";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +59,9 @@ const router = createBrowserRouter([
         ),
       },
       { path: "forgot-password", element: <ForgotPassword /> },
+       { path: "terms", element: <Terms /> },
+      { path: "privacy", element: <Privacy /> },
+      { path: "contact", element: <Contact /> },
     ],
   },
   {
@@ -65,6 +71,9 @@ const router = createBrowserRouter([
       { path: "register", element: <Register /> },
     ],
   },
+
+ 
+
 ]);
 
 export default router;

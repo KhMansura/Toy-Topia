@@ -2,6 +2,8 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaTwitterSquare } from "react-icons/fa";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => (
   <footer className="bg-gradient-to-r from-pink-300 to-blue-300  text-white">
@@ -26,33 +28,33 @@ const Footer = () => (
         <h4 className="font-semibold mb-2">Quick Links</h4>
         <ul>
           <li>
-            <a href="#" className="hover:underline">
+            <Link to="/terms" className="hover:underline">
               Terms & Conditions
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:underline">
+            <Link to="/privacy" className="hover:underline">
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:underline">
+            <Link to="/contact" className="hover:underline">
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       <div>
         <h4 className="font-semibold mb-2">Follow Us</h4>
         <div className="flex gap-3">
-          <a href="https://facebook.com" target="_blank">
-            <FaFacebookSquare />
+          <a href="https://www.facebook.com/login.php/" target="_blank">
+            <FaFacebookSquare />Facebook
           </a>
           <a href="https://instagram.com" target="_blank">
-            <FaSquareInstagram />
+            <FaSquareInstagram />Instagram
           </a>
           <a href="https://twitter.com" target="_blank">
-            <FaTwitterSquare />
+            <FaTwitterSquare />Twitter
           </a>
         </div>
       </div>

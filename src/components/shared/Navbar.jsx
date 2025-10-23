@@ -1,87 +1,159 @@
-// src/components/Shared/Navbar.jsx
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { signOut } from "firebase/auth";
-import { auth } from "../../firebase";
+import logo from "../../assets/logo.png";
 
-export default function Navbar() {
-  const { user, loading } = useAuth();
-  const location = useLocation();
+const Navbar = () => {
+  const { user, logout, loading } = useAuth();
 
-  const handleLogout = () => signOut(auth);
-
-  const isActive = (path) => location.pathname === path 
-    ? "font-bold text-pink-600 border-b-2 border-pink-400" 
-    : "text-gray-700 hover:text-pink-500";
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
-    <nav className="bg-white shadow-sm py-3 sticky top-0 z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold flex items-center gap-2">
-          <span className="text-pink-500">🧸</span>
-          <span className="text-gray-800">ToyTopia</span>
+    <nav className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-200 shadow-md sticky top-0 z-40">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        {/* logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow">
+            <span className=" ">
+              <img
+                src={logo}
+                alt=""
+                className="w-full h-full object-contain rounded-full"
+              />
+            </span>
+          </div>
+          <span className="text-2xl font-extrabold text-white">ToyTopia</span>
         </Link>
-
-        <div className="flex items-center gap-6">
-          <Link to="/" className={isActive("/")}>Home</Link>
-          
+        {/* navlinks */}
+        <div className="hidden md:flex items-center gap-3">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-ghost btn-sm text-white"
+                : "btn btn-ghost btn-sm text-white/90"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-ghost btn-sm text-white"
+                : "btn btn-ghost btn-sm text-white/90"
+            }
+          >
+            Dashboard
+          </NavLink>
+          <NavLink
+            to="/my-profile"
+            className={({ isActive }) =>
+              isActive
+                ? "btn btn-ghost btn-sm text-white"
+                : "btn btn-ghost btn-sm text-white/90"
+            }
+          >
+            My Profile
+          </NavLink>
+        </div>
+        {/* auth */}
+        <div className="flex items-center gap-3">
           {loading ? (
-            <div className="skeleton w-10 h-10 rounded-full"></div>
+            <div className="w-10 h-10 rounded-full bg-gray-300 animate-pulse"></div>
           ) : user ? (
-            <div className="dropdown dropdown-end">
-              <label tabIndex={0} className="cursor-pointer">
-                <div className="avatar">
-                  <div className="w-10 rounded-full ring ring-pink-200">
-                    <img 
-                      src={user.photoURL || "https://placehold.co/100?text=U&font=roboto"} 
-                      alt="user" 
-                      className="bg-pink-100"
-                    />
-                  </div>
-                </div>
-              </label>
-              <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-box w-52 mt-2 border border-pink-100">
-                <li><span className="text-sm font-semibold px-2 text-gray-700">{user.displayName || "User"}</span></li>
-                <li><Link to="/my-profile" className="px-2 py-1 hover:bg-pink-50 rounded">My Profile</Link></li>
-                <li><button onClick={handleLogout} className="w-full text-left px-2 py-1 hover:bg-red-50 rounded text-red-600">Logout</button></li>
-              </ul>
-            </div>
+            <>
+              <div
+                title={user.displayName || user.email}
+                className="tooltip tooltip-bottom"
+                data-tip={user.displayName || user.email}
+              >
+                <img
+                  src={
+                    user.photoURL ||
+                    "https://i.ibb.co/6ykWQvS/avatar-placeholder.png"
+                  }
+                  alt="user"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white shadow"
+                />
+              </div>
+              <button
+                onClick={handleLogout}
+                className="btn btn-sm btn-outline bg-white/20 text-white"
+              >
+                Logout
+              </button>
+            </>
           ) : (
-            <Link to="/login" className="btn btn-sm btn-pink">Login</Link>
+            <Link to="/auth/login" className="btn btn-sm btn-accent">
+              Login
+            </Link>
           )}
         </div>
       </div>
     </nav>
   );
-}
-// import React, { useContext } from 'react';
-// import { Link, NavLink } from 'react-router-dom';
-// import { AuthContext } from '../providers/AuthProvider';
+};
 
+export default Navbar;
 
-// export default function Navbar() {
-// const { user, logout } = useContext(AuthContext);
+// import React from "react";
+// import { Link, NavLink } from "react-router-dom";
+// import useAuth from "../../hooks/useAuth";
+// import logo from '../../assets/logo.png';
 
+// const Navbar = () => {
+//   const { user, logout, loading } = useAuth();
 
-// return (
-// <div className="navbar bg-base-200 sticky top-0 z-50">
-// <div className="navbar-start container-max">
-// <Link to="/" className="btn btn-ghost normal-case text-xl">ToyTopia</Link>
-// </div>
-// <div className="navbar-center hidden lg:flex">
-// <NavLink to="/" className={({isActive})=>isActive? 'btn btn-ghost active':'btn btn-ghost'}>Home</NavLink>
-// <NavLink to="/profile" className={({isActive})=>isActive? 'btn btn-ghost active':'btn btn-ghost'}>My Profile</NavLink>
-// </div>
-// <div className="navbar-end container-max">
-// {user ? (
-// <div className="flex items-center gap-3">
-// <img src={user.photoURL || 'https://i.ibb.co/placeholder.png'} alt="user" title={user.displayName} className="w-10 h-10 rounded-full" />
-// <button className="btn btn-outline" onClick={logout}>Logout</button>
-// </div>
-// ) : (
-// <Link to="/login" className="btn">Login</Link>
-// )}
-// </div>
-// </div>
-// );
-// }
+//   const handleLogout = async () => {
+//     try {
+//       await logout();
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   };
+
+//   return (
+//     <nav className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-200 shadow-md sticky top-0 z-40">
+//       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+//         {/* logo */}
+//         <Link to="/" className="flex items-center gap-2">
+//           <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow">
+//             <span className=" "><img src={logo} alt="" className="w-full h-full object-contain rounded-full" /></span>
+//           </div>
+//           <span className="text-2xl font-extrabold text-white">ToyTopia</span>
+//         </Link>
+//         {/* navlinks */}
+//         <div className="hidden md:flex items-center gap-3">
+//           <NavLink to="/" className={({ isActive }) => (isActive ? "btn btn-ghost btn-sm text-white" : "btn btn-ghost btn-sm text-white/90")}>Home</NavLink>
+//           <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "btn btn-ghost btn-sm text-white" : "btn btn-ghost btn-sm text-white/90")}>Dashboard</NavLink>
+//           <NavLink to="/my-profile" className={({ isActive }) => (isActive ? "btn btn-ghost btn-sm text-white" : "btn btn-ghost btn-sm text-white/90")}>My Profile</NavLink>
+//         </div>
+//         {/* auth */}
+//         <div className="flex items-center gap-3">
+//           {loading ? (
+//             // Loader while Firebase checks auth state
+//             <div className="w-10 h-10 rounded-full bg-gray-300 animate-pulse"></div>
+//           ) : user ? (
+//             <>
+//               <div title={user.displayName || user.email} className="tooltip tooltip-bottom" data-tip={user.displayName || user.email}>
+//                 <img src={user.photoURL || "https://i.ibb.co/6ykWQvS/avatar-placeholder.png"} alt="user" className="w-10 h-10 rounded-full object-cover border-2 border-white shadow" />
+//               </div>
+//               <button onClick={handleLogout} className="btn btn-sm btn-outline bg-white/20 text-white">Logout</button>
+//             </>
+//           ) : (
+//             <Link to="/auth/login" className="btn btn-sm btn-accent">Login</Link>
+//           )}
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;

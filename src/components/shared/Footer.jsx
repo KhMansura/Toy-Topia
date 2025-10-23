@@ -1,18 +1,66 @@
-export default function Footer(){
-return (
-<footer className="footer p-10 bg-base-200 text-base-content">
-<div>
-<span className="footer-title">ToyTopia</span>
-<a className="link link-hover">Terms</a>
-<a className="link link-hover">Privacy</a>
-<a className="link link-hover">Contact</a>
-</div>
-<div>
-<span className="footer-title">Social</span>
-<a className="link link-hover">Twitter</a>
-<a className="link link-hover">Facebook</a>
-<a className="link link-hover">Instagram</a>
-</div>
-</footer>
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaTwitterSquare } from "react-icons/fa";
+import logo from "../../assets/logo.png";
+
+const Footer = () => (
+  <footer className="bg-gradient-to-r from-pink-300 to-blue-300  text-white">
+    <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <div
+          className=" 
+ w-10 h-10 rounded-full flex items-center justify-center shadow"
+        >
+          <span className=" ">
+            <img
+              src={logo}
+              alt=""
+              className="w-full h-full object-contain rounded-full"
+            />
+          </span>
+        </div>
+        <h3 className="text-2xl font-bold mb-2">ToyTopia</h3>
+        <p>Discover fun, creativity, and learning through toys!</p>
+      </div>
+      <div>
+        <h4 className="font-semibold mb-2">Quick Links</h4>
+        <ul>
+          <li>
+            <a href="#" className="hover:underline">
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-semibold mb-2">Follow Us</h4>
+        <div className="flex gap-3">
+          <a href="https://facebook.com" target="_blank">
+            <FaFacebookSquare />
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <FaSquareInstagram />
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <FaTwitterSquare />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="text-center bg-blue-300 py-3 text-sm">
+      © {new Date().getFullYear()} ToyTopia. All rights reserved.
+    </div>
+  </footer>
 );
-}
+
+export default Footer;

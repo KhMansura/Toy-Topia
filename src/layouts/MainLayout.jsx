@@ -1,13 +1,15 @@
-// src/layouts/MainLayout.jsx
+
+
+import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="container mx-auto px-4 py-6 flex-grow">
+      <main className="flex-1 bg-gradient-to-b from-white to-pink-50">
         <Outlet />
       </main>
       <Footer />

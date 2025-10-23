@@ -1,11 +1,21 @@
-import React from 'react';
+import { useContext } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProviders";
+import Loader from "../components/shared/Loader";
 
-const ProtectedRoutes = () => {
-    return (
-        <div>
-                ProtectedRoutes
-        </div>
-    );
+const ProtectedRoutes = ({ children }) => {
+  const { user, loading } = useContext(AuthContext);
+  const location = useLocation();
+
+  if (loading) {
+    return <Loader />; // or <p>Loading...</p>
+  }
+
+  if (!user) {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  return children;
 };
 
 export default ProtectedRoutes;

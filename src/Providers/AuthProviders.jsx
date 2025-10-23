@@ -91,8 +91,9 @@ import {
   updateProfile,
   GoogleAuthProvider,
   signInWithPopup,
+  sendPasswordResetEmail,
 } from "firebase/auth";
-import app from "../firebase"; // ✅ your firebase.js config
+import app from "../firebase";
 
 export const AuthContext = createContext(null);
 
@@ -114,6 +115,14 @@ const AuthProviders = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+
+  // 🔹 Reset password (real Firebase implementation)
+const resetPassword = (email) => {
+  setLoading(true);
+  return sendPasswordResetEmail(auth, email)
+    .finally(() => setLoading(false));
+};
+
 
   // 🔹 Google sign-in
   const googleLogin = () => {
@@ -149,6 +158,7 @@ const AuthProviders = ({ children }) => {
     googleLogin,
     logout,
     updateUserProfile,
+    resetPassword, 
   };
 
   return (

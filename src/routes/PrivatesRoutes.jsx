@@ -19,4 +19,3 @@ const PrivatesRoutes = ({ children }) => {
 };
 
 export default PrivatesRoutes;
-

@@ -7,6 +7,14 @@ const MyProfile = () => {
   const [name, setName] = useState(user?.displayName || "");
   const [photo, setPhoto] = useState(user?.photoURL || "");
 
+
+  //  useEffect(() => {
+  //   if (user) {
+  //     setName(user.displayName || "");
+  //     setPhoto(user.photoURL || "");
+  //   }
+  // }, [user]);
+
   useEffect(() => {
     document.title = "ToyTopia — Profile";
   }, []);

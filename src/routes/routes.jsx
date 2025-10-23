@@ -22,10 +22,12 @@ import MyProfile from "../pages/MyProfile";
 import ForgotPassword from "../pages/ForgotPassword";
 import ExtraPage from "../pages/ExtraPage";
 import NotFound from "../pages/NotFound";
-import PrivatesRoutes from "./PrivatesRoutes";
+// import PrivatesRoutes from "./PrivatesRoutes";
 import Terms from "../pages/Terms";
 import Privacy from "../pages/Privacy";
 import Contact from "../pages/Contact";
+import AllToys from "../pages/AllToys";
+import PrivatesRoutes from "../routes/PrivatesRoutes";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,15 @@ const router = createBrowserRouter([
           </PrivatesRoutes>
         ),
       },
+      {
+  path: "/all-toys",
+  element: (
+    <PrivatesRoutes>
+      <AllToys />
+    </PrivatesRoutes>
+  ),
+},
+
       { path: "forgot-password", element: <ForgotPassword /> },
        { path: "terms", element: <Terms /> },
       { path: "privacy", element: <Privacy /> },

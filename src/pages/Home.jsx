@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   useEffect(() => {
@@ -68,7 +69,14 @@ const Home = () => {
             <ToyCard key={toy.toyId} toy={toy} />
           ))}
         </div>
-      </section>
+        <div className="text-center mt-6">
+  <Link to="/all-toys">
+    <button className="btn btn-primary">Show All</button>
+  </Link>
+</div>
+      
+ </section>
+ 
 
       {/* Extra Sections */}
       <ExtraSection1 />

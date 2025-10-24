@@ -1,21 +1,40 @@
-```md
 # ToyTopia
-A playful online marketplace for local toy sellers built with React, Firebase, and Tailwind.
 
+A playful online marketplace for local toy sellers built with React, Firebase, and Tailwind CSS. ToyTopia allows users to browse, view details, and manage toy listings in a secure and responsive environment.
 
-## How to run
-1. `npm install`
-2. Add your Firebase keys to `.env`
-3. `npm run dev`
+🔗 **Live URL**: [https://toptopia.netlify.app](https://toptopia.netlify.app)
 
+## ✨ Key Features
 
-## Features
-- Email/Password + Google authentication
-- Protected routes
-- Responsive UI with Tailwind + DaisyUI
-- Swiper slider on homepage
-```
+- **Authentication**: Secure login/signup with Email/Password and Google Sign-In
+- **Protected Routes**: Access to profile and dashboard only for authenticated users
+- **Persistent User Sessions**: User info remains visible in the navbar even after page reload
+- **Profile Management**: Users can update their display name and photo URL instantly
+- **Responsive Design**: Fully mobile-friendly UI using Tailwind CSS and DaisyUI
+- **Interactive Homepage**: Features a Swiper.js carousel showcasing popular toys
+- **SPA Navigation**: Smooth client-side routing with React Router
+- **Loader States**: Shows loading indicators during auth checks and data fetching
 
+## 🛠️ Tech Stack & npm Packages
 
----
+- **Framework**: React (Vite)
+- **Routing**: `react-router-dom`
+- **Styling**: `tailwindcss`, `daisyui`
+- **Firebase**: 
+  - `firebase` (Authentication)
+- **UI Components**: 
+  - `swiper` (carousel/slider)
+  - `sweetalert2,toast` (alerts and notifications)
+  - `react-icons` (eye/eye-slash icons)
+- **Development**: 
+  - `vite` (dev server & build)
+  - `eslint`, `prettier` (code quality)
+
+## ▶️ How to Run Locally
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/programming-hero-web-course2/b12-a9-firesheild-KhMansura.git
+   cd toytopia
+   
 

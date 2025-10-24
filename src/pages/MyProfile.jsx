@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
+import Loader from "../components/shared/Loader";
 
 const MyProfile = () => {
   const { user, updateUserProfile } = useAuth();
   const [name, setName] = useState(user?.displayName || "");
   const [photo, setPhoto] = useState(user?.photoURL || "");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (user) {
       setName(user.displayName || "");
       setPhoto(user.photoURL || "");
+      setLoading(false);
     }
   }, [user]);
 
@@ -31,6 +34,7 @@ const MyProfile = () => {
       Swal.fire("Error", err.message, "error");
     }
   };
+  if (loading) return <Loader />;
 
 
   return (

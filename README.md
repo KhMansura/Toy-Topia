@@ -2,7 +2,7 @@
 
 A playful online marketplace for local toy sellers built with React, Firebase, and Tailwind CSS. ToyTopia allows users to browse, view details, and manage toy listings in a secure and responsive environment.
 
-🔗 **Live URL**: [https://toptopia.netlify.app](https://toptopia.netlify.app)
+🔗 **Live URL**: [https://toytopia-3191e.web.app/my-profile](https://toytopia-3191e.web.app/my-profile)
 
 ## ✨ Key Features
 

@@ -70,7 +70,7 @@ const Home = () => {
           ))}
         </div>
         <div className="text-center mt-6">
-  <Link to="/all-toys">
+  <Link to="all-toys">
     <button className="btn btn-primary">Show All</button>
   </Link>
 </div>

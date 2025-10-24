@@ -60,7 +60,7 @@ const ToyCard = ({ toy }) => {
         <p className="text-gray-500">⭐ {rating} | Qty: {availableQuantity}</p>
         <p className="font-bold text-purple-600">${price}</p>
         <div className="card-actions justify-end">
-          <Link to={`/toy/${toyId}`} className="btn btn-outline btn-sm btn-primary">
+          <Link to={`toy/${toyId}`} className="btn btn-outline btn-sm btn-primary">
             View More
           </Link>
         </div>

@@ -45,7 +45,7 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            to="/dashboard"
+            to="dashboard"
             className={({ isActive }) =>
               isActive
                 ? "btn btn-ghost btn-sm text-white"
@@ -55,7 +55,7 @@ const Navbar = () => {
             Dashboard
           </NavLink>
           <NavLink
-            to="/my-profile"
+            to="my-profile"
             className={({ isActive }) =>
               isActive
                 ? "btn btn-ghost btn-sm text-white"
@@ -102,7 +102,7 @@ const Navbar = () => {
               </button>
             </>
           ) : (
-            <Link to="/auth/login" className="btn btn-sm btn-accent">
+            <Link to="login" className="btn btn-sm btn-accent">
               Login
             </Link>
           )}

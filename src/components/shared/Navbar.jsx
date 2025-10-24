@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -18,6 +17,35 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-200 shadow-md sticky top-0 z-40">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        
+  {/* Mobile dropdown menu */}
+  <div className="md:hidden dropdown">
+    <label tabIndex={0} className="btn btn-sm btn-ghost text-white">
+      ☰
+    </label>
+    <ul
+      tabIndex={0}
+      className="dropdown-content menu p-2 shadow bg-white rounded-box w-52 mt-3 z-50"
+    >
+      <li>
+        <NavLink to="/" className="text-black">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/dashboard" className="text-black">
+          Dashboard
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/my-profile" className="text-black">
+          My Profile
+        </NavLink>
+      </li>
+    </ul>
+  </div>
+
+
         {/* logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow">
@@ -68,7 +96,7 @@ const Navbar = () => {
 
         {/* auth */}
         <div className="flex items-center gap-3">
-          {/* ✅ Loader when checking auth state */}
+          {/* Loader when checking auth state */}
           {loading ? (
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-gray-300 animate-pulse"></div>
@@ -76,7 +104,7 @@ const Navbar = () => {
             </div>
           ) : user ? (
             <>
-              {/* ✅ Show user photo & name after login */}
+              {/* Show user photo & name after login */}
               <div
                 title={user.displayName || user.email}
                 className="tooltip tooltip-bottom flex items-center gap-2"

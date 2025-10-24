@@ -1,10 +1,9 @@
-
-
 import React, { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { useNavigate, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const passwordValid = (pw) =>
   pw.length >= 6 && /[A-Z]/.test(pw) && /[a-z]/.test(pw);
@@ -34,10 +33,10 @@ const Register = () => {
     }
 
     try {
-      // Step 1: Register user
+      // 1: Register user
       await register(email, password);
 
-      // Step 2: Update profile (use function from AuthProvider)
+      // 2: Update profile
       await updateUserProfile({
         displayName: name,
         photoURL: photoURL || null,
@@ -124,7 +123,7 @@ const Register = () => {
           onClick={handleGoogle}
           className="btn btn-outline w-full mb-2 text-gray-600"
         >
-          Sign up with Google
+         <FcGoogle /> Sign up with Google
         </button>
         <p className="text-sm text-center text-gray-400">
           Already have an account?{" "}

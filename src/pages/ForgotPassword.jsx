@@ -13,7 +13,7 @@ const ForgotPassword = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // If navigated from login with prefilled email, pick it up
+    // If navigated from login with prefilled email
     if (location.state?.email) setEmail(location.state.email);
   }, [location.state]);
 
@@ -26,7 +26,7 @@ const ForgotPassword = () => {
           "A password reset email was sent (you'll be redirected to Gmail if available).",
           "success"
         ).then(() => {
-          // Redirect to Gmail web (a best-effort redirect)
+          // Redirect to Gmail
           window.open("https://mail.google.com", "_blank");
         });
       })

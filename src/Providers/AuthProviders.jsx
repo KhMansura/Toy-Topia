@@ -1,4 +1,3 @@
-
 import React, { createContext, useEffect, useState } from "react";
 import {
   getAuth,
@@ -21,23 +20,23 @@ const AuthProviders = ({ children }) => {
     
   const auth = getAuth(app);
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // 🔄 Loader state
+  const [loading, setLoading] = useState(true);
 
   const googleProvider = new GoogleAuthProvider();
 
-  // 🔹 Register new user
+  //  Register new user
   const register = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  // 🔹 Login with email/password
+  //  Login with email/password
   const login = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // 🔹 Reset password (real Firebase implementation)
+  //  Reset password
 const resetPassword = (email) => {
   setLoading(true);
   return sendPasswordResetEmail(auth, email)
@@ -45,13 +44,13 @@ const resetPassword = (email) => {
 };
 
 
-  // 🔹 Google sign-in
+  //  Google sign-in
   const googleLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
-  // 🔹 Logout
+  //  Logout
   const logout = () => {
     setLoading(true);
     return signOut(auth);
@@ -66,16 +65,11 @@ const resetPassword = (email) => {
     }));
   };
 
-  // 🔹 Update Profile
-//   const updateUserProfile = (profile) => {
-//     return updateProfile(auth.currentUser, profile);
-//   };
-
-  // 🔹 Persist user info after reload
+  //  Persist user info after reload
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      setLoading(false); // stop loader when done
+      setLoading(false);
     });
     return () => unsubscribe();
   }, [auth]);

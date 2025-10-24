@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
+import { FcGoogle } from "react-icons/fc";
 
 
 
@@ -17,7 +18,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
-    // prefill email if passed from forgot-password flow
+    // prefill email if passed from forgot-password
     if (location.state?.prefillEmail) setEmail(location.state.prefillEmail);
   }, [location.state]);
 
@@ -71,7 +72,7 @@ const Login = () => {
         </form>
 
         <div className="divider">OR</div>
-        <button onClick={handleGoogle} className="btn btn-outline w-full mb-2 text-gray-600">Continue with Google</button>
+        <button onClick={handleGoogle} className="btn btn-outline w-full mb-2 text-gray-600"><FcGoogle />Continue with Google</button>
         <p className="text-sm text-center text-gray-400">Don't have an account? <Link to="/register" className="link text-red-500">Register</Link></p>
       </div>
     </div>

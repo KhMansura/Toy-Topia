@@ -1,4 +1,3 @@
-// src/pages/ExtraPage.jsx
 import React, { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
@@ -26,7 +25,7 @@ const ExtraPage = () => {
         A quick overview of our top-selling toys and ratings performance.
       </p>
 
-      {/* 📊 Sales Chart */}
+      {/* Sales Chart */}
       <div className="bg-white rounded-2xl shadow-md p-6 mb-10">
         <h3 className="text-xl font-semibold mb-4 text-gray-700">
           Weekly Toy Sales Overview
@@ -41,7 +40,7 @@ const ExtraPage = () => {
         </ResponsiveContainer>
       </div>
 
-      {/* 📈 Rating Info */}
+      {/* Rating Info */}
       <div className="grid md:grid-cols-3 gap-6">
         {toys.map((toy, index) => (
           <div

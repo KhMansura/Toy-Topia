@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { FaShoppingCart } from "react-icons/fa";
 
 const ToyDetails = () => {
   const { id } = useParams();
@@ -25,22 +26,46 @@ const ToyDetails = () => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex flex-col md:flex-row gap-6">
-        <img src={toy.pictureURL} alt={toy.toyName} className="w-full md:w-1/2 rounded-lg" />
+        <img
+          src={toy.pictureURL}
+          alt={toy.toyName}
+          className="w-full md:w-1/2 rounded-lg"
+        />
         <div>
-          <h2 className="text-3xl font-bold mb-2 text-blue-400">{toy.toyName}</h2>
+          <h2 className="text-3xl font-bold mb-2 text-blue-400">
+            {toy.toyName}
+          </h2>
           <p className="text-black">{toy.description}</p>
-          <p className="mt-3 text-lg font-semibold text-purple-600">Price: ${toy.price}</p>
+          <p className="mt-3 text-lg font-semibold text-purple-600">
+            Price: ${toy.price}
+          </p>
           <p className="text-gray-500">Rating: {toy.rating} ⭐</p>
           <p className="text-gray-400">Available: {toy.availableQuantity}</p>
+         <button  className="btn btn-primary mt-4"><FaShoppingCart />
+            Add to Cart
+          </button>
         </div>
+        
       </div>
 
       <form onSubmit={handleTryNow} className="mt-8 bg-base-200 p-6 rounded-lg">
         <h3 className="text-xl font-bold mb-4">Try Now</h3>
         <div className="flex flex-col gap-4">
-          <input type="text" placeholder="Name" className="input input-bordered" required />
-          <input type="email" placeholder="Email" className="input input-bordered" required />
-          <button type="submit" className="btn btn-primary">Try Now</button>
+          <input
+            type="text"
+            placeholder="Name"
+            className="input input-bordered"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="input input-bordered"
+            required
+          />
+          <button type="submit" className="btn btn-primary">
+            Try Now
+          </button>
         </div>
       </form>
     </div>
@@ -48,4 +73,3 @@ const ToyDetails = () => {
 };
 
 export default ToyDetails;
-

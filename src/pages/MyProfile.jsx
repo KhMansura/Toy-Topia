@@ -7,13 +7,12 @@ const MyProfile = () => {
   const [name, setName] = useState(user?.displayName || "");
   const [photo, setPhoto] = useState(user?.photoURL || "");
 
-
-  //  useEffect(() => {
-  //   if (user) {
-  //     setName(user.displayName || "");
-  //     setPhoto(user.photoURL || "");
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    if (user) {
+      setName(user.displayName || "");
+      setPhoto(user.photoURL || "");
+    }
+  }, [user]);
 
   useEffect(() => {
     document.title = "ToyTopia — Profile";
@@ -23,11 +22,16 @@ const MyProfile = () => {
     e.preventDefault();
     try {
       await updateUserProfile({ displayName: name, photoURL: photo });
+      
+
       Swal.fire("Saved", "Profile updated", "success");
+      user.displayName = name;
+      user.photoURL = photo;
     } catch (err) {
       Swal.fire("Error", err.message, "error");
     }
   };
+
 
   return (
     <div className="container mx-auto px-4 py-10">
@@ -51,11 +55,13 @@ const MyProfile = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="text-pink-400 file-input-accent input w-full"
+            placeholder="Enter your name"
           />
           <input
             value={photo}
             onChange={(e) => setPhoto(e.target.value)}
             className="text-pink-400 input file-input-accent w-full"
+            placeholder="Enter photo Url"
           />
           <button className="btn btn-primary">Save</button>
         </form>

@@ -3,6 +3,8 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
 
+
+
 const Login = () => {
   useEffect(() => { document.title = "ToyTopia — Login"; }, []);
   const { login, googleLogin } = useAuth();
@@ -43,7 +45,13 @@ const Login = () => {
       <div className="card p-8 w-full max-w-md shadow-lg">
         <h2 className="text-2xl font-bold mb-4 text-black" >Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required className="input input-bordered w-full" />
+          <input 
+          type="email"
+           placeholder="Email"
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
+            className="input input-bordered w-full" />
           <div className="relative">
             <input type={show ? "text" : "password"} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required className="input input-bordered w-full" />
             <button type="button" onClick={() => setShow((s) => !s)} className="absolute right-2 top-2 btn btn-ghost btn-sm">
@@ -52,7 +60,13 @@ const Login = () => {
           </div>
           <div className="flex items-center justify-between">
             <button className="btn btn-primary">Login</button>
-            <Link to="/forgot-password" className="text-sm link text-black">Forgot password?</Link>
+            <p
+  onClick={() => navigate("/forgot-password", { state: { email } })}
+  className="text-sm text-blue-500 hover:underline cursor-pointer text-right"
+>
+  Forgot Password?
+</p>
+
           </div>
         </form>
 

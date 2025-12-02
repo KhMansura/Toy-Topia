@@ -14,6 +14,9 @@ import Privacy from "../pages/Privacy";
 import Contact from "../pages/Contact";
 import AllToys from "../pages/AllToys";
 import PrivatesRoutes from "../routes/PrivatesRoutes";
+import AboutUs from "../pages/AboutUs";
+import Support from "../pages/Support";
+import CartPage from "../pages/CartPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +31,10 @@ const router = createBrowserRouter([
       { path: "terms", element: <Terms /> },
       { path: "privacy", element: <Privacy /> },
       { path: "contact", element: <Contact /> },
+      { path: "about-us", element: <AboutUs/> },
+      { path: "support", element: <Support /> },
+      { path: "/cart", element: <CartPage /> },
+
 
       {
         path: "toy/:id",

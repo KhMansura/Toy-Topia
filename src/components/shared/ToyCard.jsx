@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import { useContext } from "react";
+import { CartContext } from "../../pages/CartContext";
 
 const ToyCard = ({ toy }) => {
   const { toyId, toyName, pictureURL, rating, availableQuantity, price } = toy;
+  const { addToCart } = useContext(CartContext);
+
 
   //  Placeholder handlers 
   const handleAddToCart = () => {
@@ -14,7 +18,7 @@ const ToyCard = ({ toy }) => {
   };
 
   return (
-    <div className="card bg-purple-100 shadow-md hover:shadow-xl transition">
+    <div className="card  bg-purple-100 shadow-md hover:shadow-xl transition">
       <figure className="h-48 overflow-hidden relative">
         <img src={pictureURL} alt={toyName} className="object-contain h-full" />
         {/* Wishlist button */}
@@ -33,7 +37,7 @@ const ToyCard = ({ toy }) => {
         <div className="card-actions justify-between items-center">
           {/* Add to Cart button */}
           <button
-            onClick={handleAddToCart}
+            onClick={() => addToCart(toy)}
             className="btn btn-outline btn-sm btn-primary flex items-center gap-1"
           >
             <FaShoppingCart size={12} /> Add to Cart

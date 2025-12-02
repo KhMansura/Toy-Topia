@@ -9,7 +9,15 @@
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
     "pictureURL": "https://i.ibb.co.com/h1MDJqbx/10713-Prod.png",
-    "subCategory": "Building Blocks"
+    "subCategory": "Building Blocks",
+      "features": [
+      "Includes a variety of colorful bricks",
+      "Encourages creativity and free building",
+      "Compatible with other Lego sets",
+      "Helps develop spatial and motor skills",
+      "Safe and durable for ages 4+"
+    ]
+
   },
   {
     "toyId": 2,
@@ -21,7 +29,14 @@
     "availableQuantity": 40,
     "description": "A luxurious dollhouse complete with furniture and dolls, perfect for imaginative playtime adventures.",
     "pictureURL": "https://i.ibb.co.com/5xndp5zB/images.jpg",
-    "subCategory": "Dolls & Accessories"
+    "subCategory": "Dolls & Accessories",
+        "features": [
+      "Includes furniture and dolls",
+      "Multi-room layout for realistic play",
+      "Promotes storytelling and imagination",
+      "High-quality plastic build",
+      "Suitable for ages 3+"
+    ]
   },
   {
     "toyId": 3,
@@ -33,7 +48,14 @@
     "availableQuantity": 65,
     "description": "Create thrilling races and loops with this high-speed Hot Wheels track set, ideal for car enthusiasts.",
     "pictureURL": "https://i.ibb.co.com/pjnbHs7W/download-1.jpg",
-    "subCategory": "Vehicles"
+    "subCategory": "Vehicles",
+    "features": [
+      "Includes loops and ramps for stunts",
+      "Compatible with all Hot Wheels cars",
+      "Easy to assemble and reconfigure",
+      "Encourages competitive play",
+      "Recommended for ages 5+"
+    ]
   },
   {
     "toyId": 4,
@@ -45,7 +67,14 @@
     "availableQuantity": 100,
     "description": "A soft, cuddly teddy bear made of premium plush fabric. Perfect gift for kids and loved ones.",
     "pictureURL": "https://i.ibb.co.com/tTmPrfw6/download-2.jpg",
-    "subCategory": "Stuffed Animals"
+    "subCategory": "Stuffed Animals",
+    "features": [
+      "Made with ultra-soft plush fabric",
+      "Perfect for hugging and cuddling",
+      "Safe stitching and child-friendly materials",
+      "Available in multiple colors",
+      "Ideal for all ages"
+    ]
   },
   {
     "toyId": 5,
@@ -57,7 +86,14 @@
     "availableQuantity": 80,
     "description": "A durable wooden train set that sparks creativity and motor skills for young kids.",
     "pictureURL": "https://i.ibb.co.com/0pQnYvzR/images-1.jpg",
-    "subCategory": "Wooden Toys"
+    "subCategory": "Wooden Toys",
+    "features": [
+      "Made from eco-friendly wood",
+      "Includes tracks and train pieces",
+      "Smooth edges for safe play",
+      "Improves hand-eye coordination",
+      "Recommended for ages 3+"
+    ]
   },
   {
     "toyId": 6,
@@ -69,7 +105,14 @@
     "availableQuantity": 55,
     "description": "High-speed remote control car with rechargeable batteries and durable wheels for outdoor fun.",
     "pictureURL": "https://i.ibb.co.com/1t2HF2jF/images-2.jpg",
-    "subCategory": "Electronics"
+    "subCategory": "Electronics",
+    "features": [
+      "Rechargeable battery included",
+      "Durable wheels for rough terrain",
+      "Remote range up to 30 meters",
+      "Fast speed with smooth steering",
+      "Suitable for ages 6+"
+    ]
   },
   {
     "toyId": 7,
@@ -81,7 +124,14 @@
     "availableQuantity": 50,
     "description": "Interactive kitchen set with utensils and mini food items, inspiring culinary creativity in kids.",
     "pictureURL": "https://i.ibb.co.com/BHhjmk8H/download-3.jpg",
-    "subCategory": "Pretend Play"
+    "subCategory": "Pretend Play",
+    "features": [
+      "Includes pots, pans, and utensils",
+      "Realistic food items for pretend cooking",
+      "Encourages role play and creativity",
+      "Safe plastic with rounded edges",
+      "Best for ages 3–7"
+    ]
   },
   {
     "toyId": 8,
@@ -93,7 +143,14 @@
     "availableQuantity": 70,
     "description": "Detailed action hero figure with movable joints and accessories for action-packed adventures.",
     "pictureURL": "https://i.ibb.co.com/gMX8TypS/images-3.jpg",
-    "subCategory": "Action Figures"
+    "subCategory": "Action Figures",
+    "features": [
+      "Movable joints for dynamic poses",
+      "Includes weapons and gear",
+      "Durable plastic for rough play",
+      "Great for storytelling and battles",
+      "Recommended for ages 5+"
+    ]
   },
   {
     "toyId": 9,
@@ -105,7 +162,14 @@
     "availableQuantity": 90,
     "description": "Colorful puzzle blocks designed to boost problem-solving and coordination skills.",
     "pictureURL": "https://i.ibb.co.com/KpXxxc0D/images-4.jpg",
-    "subCategory": "Educational Toys"
+    "subCategory": "Educational Toys",
+    "features": [
+      "Bright colors and varied shapes",
+      "Improves logic and coordination",
+      "Safe for toddlers with large pieces",
+      "Easy to clean and store",
+      "Ideal for ages 2–5"
+    ]
   },
   {
     "toyId": 10,
@@ -117,6 +181,13 @@
     "availableQuantity": 120,
     "description": "Classic yellow rubber duck toy that makes bath time more fun for toddlers.",
     "pictureURL": "https://i.ibb.co.com/MkWTB7VN/download-4.jpg",
-    "subCategory": "Bath Toys"
+    "subCategory": "Bath Toys",
+    "features": [
+      "Floats easily in water",
+      "Squeaks when squeezed",
+      "Safe BPA-free rubber material",
+      "Perfect size for toddler hands",
+      "Great for bath time fun"
+    ]
   }
 ]

@@ -120,7 +120,9 @@ const CartPage = () => {
                     className="w-20 h-20 object-contain rounded"
                   />
                   <div>
-                    <h3 className="font-semibold text-lg text-purple-600">{item.toyName}</h3>
+                    <h3 className="font-semibold text-lg text-purple-600">
+                      {item.toyName}
+                    </h3>
                     <p className="text-gray-500">⭐ {item.rating}</p>
                     <p className="text-pink-600 font-bold">${item.price}</p>
                   </div>
@@ -140,7 +142,9 @@ const CartPage = () => {
             <h3 className="text-xl font-bold text-purple-700">
               Total: ${totalPrice.toFixed(2)}
             </h3>
-            <button className="btn btn-primary mt-4">Proceed to Checkout</button>
+            <button className="btn btn-primary mt-4">
+              Proceed to Checkout
+            </button>
           </div>
         </>
       )}

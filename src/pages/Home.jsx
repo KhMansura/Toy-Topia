@@ -9,6 +9,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
+import TestimonialSection from "./Testimonials";
 
 const Home = () => {
   useEffect(() => {
@@ -143,6 +144,7 @@ const Home = () => {
     {/* Add toy cards or highlights */}
   </div>
 </section>
+<TestimonialSection></TestimonialSection>
 
 {/* Categories Section */}
 <section className="container mx-auto px-4 py-12">

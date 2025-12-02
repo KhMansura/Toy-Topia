@@ -17,6 +17,7 @@ import PrivatesRoutes from "../routes/PrivatesRoutes";
 import AboutUs from "../pages/AboutUs";
 import Support from "../pages/Support";
 import CartPage from "../pages/CartPage";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,7 @@ const router = createBrowserRouter([
           </PrivatesRoutes>
         ),
       },
+      { path: "*", element: <ErrorPage /> },
     ],
   },
 ]);

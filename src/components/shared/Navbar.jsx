@@ -148,10 +148,10 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import logo from "../../assets/logo.png";
 import AboutUs from "../../pages/AboutUs";
-
 import Support from "../../pages/Support";
 import { CartContext } from "../../pages/CartContext";
 import { FaShoppingCart } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const { user, logout, loading } = useAuth();
@@ -166,7 +166,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-primary shadow-md px-4 md:px-8 lg:px-12 py-3 sticky top-0 z-40">
+    <nav className="bg-primary shadow-md w-full px-4 md:px-6 lg:px-8 py-3 sticky top-0 z-40">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 py-3 flex items-center justify-between">
         {/* Mobile dropdown menu */}
         <div className="md:hidden dropdown">
@@ -242,7 +242,7 @@ const Navbar = () => {
         </Link>
 
         {/* navlinks (desktop) */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-0">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -357,6 +357,7 @@ const Navbar = () => {
             )}
           </Link>
         </div>
+        <ThemeToggle></ThemeToggle>
 
         {/* auth */}
         <div className="flex items-center gap-3">

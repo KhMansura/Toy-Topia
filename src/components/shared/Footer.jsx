@@ -1,9 +1,8 @@
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
+import { FaFacebookSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaSquareInstagram, FaXTwitter } from "react-icons/fa6";
 import { FaTwitterSquare } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
-
 
 const Footer = () => (
   <footer className="bg-gradient-to-r from-pink-300 to-blue-300  text-white dark:bg-gray-800 dark:text-gray-200">
@@ -48,13 +47,19 @@ const Footer = () => (
         <h4 className="font-semibold mb-2">Follow Us</h4>
         <div className="flex gap-3">
           <a href="https://www.facebook.com/login.php/" target="_blank">
-            <FaFacebookSquare />Facebook
+            <FaFacebookSquare />
+            Facebook
           </a>
           <a href="https://instagram.com" target="_blank">
-            <FaSquareInstagram />Instagram
+            <FaSquareInstagram />
+            Instagram
           </a>
           <a href="https://twitter.com" target="_blank">
-            <FaTwitterSquare />Twitter
+            <FaXTwitter />
+            Twitter
+          </a>
+          <a href="https://www.linkedin.com/in/kh-mansura" target="_blank">
+            <FaLinkedin /> LinkedIn
           </a>
         </div>
       </div>

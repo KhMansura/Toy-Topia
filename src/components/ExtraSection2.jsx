@@ -51,7 +51,7 @@ const ExtraSection2 = () => (
       </div>
     </div>
 
-    <button className="btn btn-secondary mt-8">Discover Educational Toys</button>
+    {/* <button className="btn btn-secondary mt-8">Discover Educational Toys</button> */}
   </section>
 );
 

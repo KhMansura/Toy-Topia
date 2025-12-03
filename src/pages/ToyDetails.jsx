@@ -172,6 +172,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FaShoppingCart } from "react-icons/fa";
+import CommentSection from "./CommentPage";
 
 const ToyDetails = () => {
   const { id } = useParams();
@@ -318,6 +319,7 @@ const ToyDetails = () => {
     ))}
   </div>
 </section>
+<CommentSection></CommentSection>
     </div>
   );
 };

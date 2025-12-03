@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 import TestimonialSection from "./Testimonials";
 
+
 const Home = () => {
   useEffect(() => {
     document.title = "ToyTopia — Home";
@@ -135,16 +136,16 @@ const Home = () => {
       <ExtraSection1 />
       <ExtraSection2 />
       {/* Top Rated Section */}
-<section className="bg-pink-50 py-12">
+{/* <section className="bg-pink-50 py-12">
   <div className="container mx-auto px-4">
     <h2 className="text-3xl font-bold mb-6 text-center text-pink-600">Top Rated Toys</h2>
     <p className="text-center text-gray-700 mb-6">
       Discover our most loved toys by customers worldwide.
     </p>
     {/* Add toy cards or highlights */}
-  </div>
-</section>
-<TestimonialSection></TestimonialSection>
+  {/* </div>
+</section> */} 
+<TestimonialSection />
 
 {/* Categories Section */}
 <section className="container mx-auto px-4 py-12">
@@ -182,10 +183,28 @@ const Home = () => {
 </section>
 
 {/* Promotions / Offers Section */}
-<section className="container mx-auto px-4 py-12 text-center bg-blue-50 rounded-lg shadow">
+{/* <section className="container mx-auto px-4 py-12 text-center bg-blue-50 rounded-lg shadow">
   <h2 className="text-3xl font-bold mb-4 text-blue-600">Special Offers</h2>
   <p className="text-gray-700 mb-6">Get up to 30% off selected toys this season!</p>
   <Link to="/offers" className="btn btn-secondary">Shop Offers</Link>
+</section> */}
+{/* Promotions / Offers Section */}
+<section className="container mx-auto px-6 py-16 text-center 
+                    bg-gradient-to-r from-blue-100 to-indigo-200 
+                    rounded-xl shadow-lg">
+  <h2 className="text-4xl font-extrabold mb-4 text-indigo-700 dark:text-indigo-300">
+    🎁 Special Offers
+  </h2>
+  <p className="text-lg text-gray-700 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+    Enjoy up to <span className="font-bold text-pink-600">30% OFF</span> on selected toys this season. 
+    Limited time only — don’t miss out!
+  </p>
+  <Link 
+    to="/offers" 
+    className="btn btn-primary px-6 py-3 text-lg transition-transform duration-300 hover:scale-105"
+  >
+    Shop Offers
+  </Link>
 </section>
 
 {/* Newsletter Section */}

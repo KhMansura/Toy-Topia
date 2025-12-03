@@ -2,7 +2,7 @@
 
 A playful online marketplace for local toy sellers built with React, Firebase, and Tailwind CSS. ToyTopia allows users to browse, view details, and manage toy listings in a secure and responsive environment.
 
-🔗 **Live URL**: [https://toytopia-3191e.web.app/my-profile](https://toytopia-3191e.web.app/my-profile)
+🔗 **Live URL**: [https://toytopia-a09-kh.netlify.app/](https://toytopia-a09-kh.netlify.app/)
 
 ## ✨ Key Features
 
@@ -34,7 +34,6 @@ A playful online marketplace for local toy sellers built with React, Firebase, a
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/programming-hero-web-course2/b12-a9-firesheild-KhMansura.git
-   cd toytopia
+   git clone https://github.com/KhMansura/Toy-Topia
    
 

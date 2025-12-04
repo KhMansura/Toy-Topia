@@ -26,6 +26,7 @@ const Login = () => {
     e.preventDefault();
     login(email, password)
       .then(() => {
+        localStorage.setItem("isLoggedIn", "true");
         Swal.fire("Welcome back!", "You are logged in.", "success");
         navigate(from, { replace: true });
       })
@@ -35,6 +36,7 @@ const Login = () => {
   const handleGoogle = () => {
     googleLogin()
       .then(() => {
+        localStorage.setItem("isLoggedIn", "true");
         Swal.fire("Logged in", "Google sign-in successful", "success");
         navigate(from, { replace: true });
       })

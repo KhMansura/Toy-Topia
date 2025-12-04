@@ -4,6 +4,17 @@ A playful online marketplace for local toy sellers built with React, Firebase, a
 
 🔗 **Live URL**: [https://toytopia-a09-kh.netlify.app/](https://toytopia-a09-kh.netlify.app/)
 
+### Homepage
+![Homepage](../b12-a9-firesheild-KhMansura/public/HomePage.png)(https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/Home.png)
+
+### Cart Page
+![Cart](../b12-a9-firesheild-KhMansura/public/Cart.png)
+
+### Login Page
+![Login](../b12-a9-firesheild-KhMansura/public/LoginPage.png)
+
+
+
 ## ✨ Key Features
 
 - **Authentication**: Secure login/signup with Email/Password and Google Sign-In

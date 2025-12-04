@@ -66,9 +66,9 @@ const router = createBrowserRouter([
       {
         path: "all-toys",
         element: (
-          <PrivatesRoutes>
+          
             <AllToys />
-          </PrivatesRoutes>
+          
         ),
       },
       { path: "*", element: <ErrorPage /> },

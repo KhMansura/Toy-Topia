@@ -5,13 +5,7 @@ A playful online marketplace for local toy sellers built with React, Firebase, a
 🔗 **Live URL**: [https://toytopia-a09-kh.netlify.app/](https://toytopia-a09-kh.netlify.app/)
 
 ### Homepage
-![Homepage](https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/HomePage.png)
-
-### Cart Page
-![Cart](https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/Cart.png)
-
-### Login Page
-![Login](https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/LoginPage.png)
+![Homepage](https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/full-page-home.png)
 
 
 
@@ -41,10 +35,58 @@ A playful online marketplace for local toy sellers built with React, Firebase, a
   - `vite` (dev server & build)
   - `eslint`, `prettier` (code quality)
 
-## ▶️ How to Run Locally
+    ## 📌 Project Purpose
+ToyTopia was built to provide a simple, playful, and secure platform for browsing and managing toy listings.  
+It focuses on clean UI, smooth navigation, and safe authentication for all users.
 
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/KhMansura/Toy-Topia
+---
+
+## 📦 Dependencies Used
+
+### Main Dependencies
+- React
+- React Router DOM
+- Firebase
+- Tailwind CSS
+- DaisyUI
+- Swiper.js
+- SweetAlert2
+- React Icons
+
+### Dev Dependencies
+- Vite
+- ESLint
+- Prettier
+
+---
+
+## ▶️ How to Run Locally (Complete Guide)
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/KhMansura/Toy-Topia.git
+2. Install dependencies
+cd Toy-Topia
+npm install
+3. Create a .env file in the project root
+VITE_apiKey=your_firebase_api_key
+VITE_authDomain=your_auth_domain
+VITE_projectId=your_project_id
+VITE_storageBucket=your_storage_bucket
+VITE_messagingSenderId=your_sender_id
+VITE_appId=your_app_id
+4. Start the development server
+npm run dev
+5. Open in browser
+http://localhost:5173
+```
+📚 Additional Notes
+- Fully responsive design
+- No lorem ipsum used
+- Firebase authentication implemented correctly
+- Protected routes included
+- Meets all assignment requirements
+
+
    
 

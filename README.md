@@ -5,7 +5,9 @@ A playful online marketplace for local toy sellers built with React, Firebase, a
 🔗 **Live URL**: [https://toytopia-a09-kh.netlify.app/](https://toytopia-a09-kh.netlify.app/)
 
 ### Homepage
-![Homepage](https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/full-page-home.png)
+![Homepage](https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/fullHome.png)
+### Cart Page
+![Cart](https://raw.githubusercontent.com/KhMansura/Toy-Topia/main/public/Cart.png)
 
 
 
